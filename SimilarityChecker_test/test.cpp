@@ -7,3 +7,9 @@ TEST(SimilarityChecker, AlphaTest000) {
 	int expected = 40;
 	EXPECT_EQ(actual,expected);
 }
+TEST(SimilarityChecker, AlphaTest001) {
+	SimilarityChecker checker;
+	int actual = checker.getAppearenceScore("ABC","QWE");
+	int expected = 0;
+	EXPECT_EQ(actual,expected);
+}
