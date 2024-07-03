@@ -1,6 +1,9 @@
 #include "pch.h"
 #include "../SimilarityChecker/similar.cpp"
 
-TEST(TestCaseName, TestName) {
-	EXPECT_EQ(1,1);
+TEST(SimilarityChecker, AlphaTest000) {
+	SimilarityChecker checker;
+	int actual = checker.getAppearenceScore("ABC","ABC");
+	int expected = 40;
+	EXPECT_EQ(actual,expected);
 }
