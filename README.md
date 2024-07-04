@@ -1,3 +1,3 @@
-## Similarity Checker
+О╩©## Similarity Checker
 ---
-ю╞╩Г╣╣ ╟к╩Г ют╢о╢ы
+Л°═Л┌╛К▐└ Й╡─Л┌╛ Л·┘К▀┬К▀╓
