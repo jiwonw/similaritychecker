@@ -44,11 +44,7 @@ private:
 				idxB++;
 				continue;
 			}
-			else if (appearA[idxA] > appearB[idxB]) {
-				idxB++;
-				continue;
-			}
-			idxA++;
+			appearA[idxA] > appearB[idxB] ? idxB++ : idxA++;
 		}
 		return cntSame;
 	}
