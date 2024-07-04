@@ -27,13 +27,19 @@ TEST(SimilarityChecker, AlphaTest003) {
 }
 TEST(SimilarityChecker, AlphaTest004) {
 	SimilarityChecker checker;
-	int actual = checker.getAppearenceScore("ABCABCDEFGHIJKABC","KABCJBFEDABKKKHKIGHA");
-	int expected = 40;
-	EXPECT_EQ(actual,expected);
+	for (int i = 0; i < 500; i++)
+	{
+		int actual = checker.getAppearenceScore("ABCABCDEFGHIJKABC", "KABCJBFEDABKKKHKIGHA");
+		int expected = 40;
+		EXPECT_EQ(actual, expected);
+	}
 }
 TEST(SimilarityChecker, AlphaTest005) {
 	SimilarityChecker checker;
-	int actual = checker.getAppearenceScore("ABCDEFGHIJKLMNOPQRSTUVWXYZ","ZYXWVUTSRQPONMLKJIHGFEDCBA");
-	int expected = 40;
-	EXPECT_EQ(actual,expected);
+	for (int i = 0; i < 500; i++)
+	{
+		int actual = checker.getAppearenceScore("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "ZYXWVUTSRQPONMLKJIHGFEDCBA");
+		int expected = 40;
+		EXPECT_EQ(actual, expected);
+	}
 }
