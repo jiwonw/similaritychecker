@@ -8,6 +8,25 @@ class SimilarityChecker
 {
 public:
 
+	int getAppearenceScore2(string a, string b) 
+	{
+		vector<char> totalAlpha = {};
+		vector<char> sameAlpha = {};
+		for (const char ch : a)
+		{
+			if (totalAlpha.end() == find(totalAlpha.begin(), totalAlpha.end(), ch))
+				totalAlpha.push_back(ch);
+		}
+		for (const char ch : b)
+		{
+			if (totalAlpha.end() == find(totalAlpha.begin(), totalAlpha.end(), ch))
+				totalAlpha.push_back(ch);
+			else if (sameAlpha.end() == find(sameAlpha.begin(), sameAlpha.end(), ch))
+				sameAlpha.push_back(ch);
+		}
+		return MAX_APR_SCORE * sameAlpha.size() / totalAlpha.size();
+	}
+
 	int getAppearenceScore(string a, string b) 
 	{
 		vector<char> appearA = getAppearList(a);
